@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.9.10 on win32)" generated="20220918 22:17:41.011" rpa="false" schemaversion="3">
+<suite id="s1" name="Amazon Testes Gherkin" source="c:\Users\kenia\source\repos\RobotFramework\WebTesting_RobotFramework\amazon_testes_gherkin.robot">
+<test id="s1-t1" name="Caso de Teste 03 - Tentativa de Efetuar o Login com Email inválido" line="30">
+<kw name="Abrir o navegador" library="amazon_resources" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220918 22:17:41.344" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20220918 22:17:41.343" endtime="20220918 22:17:43.588"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220918 22:17:43.590" endtime="20220918 22:17:43.708"/>
+</kw>
+<status status="PASS" starttime="20220918 22:17:41.343" endtime="20220918 22:17:43.708"/>
+</kw>
+<kw name="Dado que estou na home page da Amazon.com.br" library="amazon_resources">
+<kw name="Acessar a home page do site Amazon.com.br" library="amazon_resources">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>url=${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220918 22:17:43.714" level="INFO">Opening url 'http://www.amazon.com.br'</msg>
+<status status="PASS" starttime="20220918 22:17:43.713" endtime="20220918 22:17:46.041"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>locator=${MENU_ELETRONICOS}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220918 22:17:46.041" endtime="20220918 22:17:46.208"/>
+</kw>
+<status status="PASS" starttime="20220918 22:17:43.712" endtime="20220918 22:17:46.208"/>
+</kw>
+<kw name="Verificar se o título da página fica &quot;Amazon.com.br | Tudo pra você, de A a Z.&quot;" library="amazon_resources" sourcename="Verificar se o título da página fica &quot;${TITULO}&quot;">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>title=${TITULO}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20220918 22:17:46.219" level="INFO">Page title is 'Amazon.com.br | Tudo pra você, de A a Z.'.</msg>
+<status status="PASS" starttime="20220918 22:17:46.209" endtime="20220918 22:17:46.220"/>
+</kw>
+<status status="PASS" starttime="20220918 22:17:46.209" endtime="20220918 22:17:46.220"/>
+</kw>
+<status status="PASS" starttime="20220918 22:17:43.710" endtime="20220918 22:17:46.220"/>
+</kw>
+<kw name="E acesso a tela de login" library="amazon_resources">
+<kw name="Acessar a tela para efetuar o login" library="amazon_resources">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>locator=nav-link-accountList-nav-line-1</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220918 22:17:46.224" level="INFO">Clicking element 'nav-link-accountList-nav-line-1'.</msg>
+<status status="PASS" starttime="20220918 22:17:46.223" endtime="20220918 22:17:46.630"/>
+</kw>
+<status status="PASS" starttime="20220918 22:17:46.222" endtime="20220918 22:17:46.630"/>
+</kw>
+<status status="PASS" starttime="20220918 22:17:46.221" endtime="20220918 22:17:46.631"/>
+</kw>
+<kw name="Quando digito um email invalido" library="amazon_resources">
+<kw name="Digitar um e-mail inválido &quot;keke@kenia.com&quot;" library="amazon_resources" sourcename="Digitar um e-mail inválido &quot;${EMAIL_INVALIDO}&quot;">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>locator=${INPUT_EMAIL_INVALIDO}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220918 22:17:46.633" endtime="20220918 22:17:46.960"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>locator=${INPUT_EMAIL_INVALIDO}</arg>
+<arg>text=${EMAIL_INVALIDO}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220918 22:17:46.961" level="INFO">Typing text 'keke@kenia.com' into text field '//input[contains(@name,'email')]'.</msg>
+<status status="PASS" starttime="20220918 22:17:46.960" endtime="20220918 22:17:47.223"/>
+</kw>
+<status status="PASS" starttime="20220918 22:17:46.632" endtime="20220918 22:17:47.223"/>
+</kw>
+<kw name="Clicar no botão Continuar" library="amazon_resources">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>locator=continue</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220918 22:17:47.224" level="INFO">Clicking button 'continue'.</msg>
+<status status="PASS" starttime="20220918 22:17:47.223" endtime="20220918 22:17:48.030"/>
+</kw>
+<status status="PASS" starttime="20220918 22:17:47.223" endtime="20220918 22:17:48.031"/>
+</kw>
+<status status="PASS" starttime="20220918 22:17:46.631" endtime="20220918 22:17:48.031"/>
+</kw>
+<kw name="Então o cacesso não deverá ser permitido" library="amazon_resources">
+<kw name="O acesso não deverá ser permitido" library="amazon_resources">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>locator=${HEADER_MENSAGEM_INVALIDA}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220918 22:17:48.033" endtime="20220918 22:17:48.056"/>
+</kw>
+<status status="PASS" starttime="20220918 22:17:48.033" endtime="20220918 22:17:48.056"/>
+</kw>
+<status status="PASS" starttime="20220918 22:17:48.032" endtime="20220918 22:17:48.056"/>
+</kw>
+<kw name="Fechar o navegador" library="amazon_resources" type="TEARDOWN">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20220918 22:17:48.202" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-54.png"&gt;&lt;img src="selenium-screenshot-54.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220918 22:17:48.058" endtime="20220918 22:17:48.202"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220918 22:17:48.202" endtime="20220918 22:17:50.419"/>
+</kw>
+<status status="PASS" starttime="20220918 22:17:48.057" endtime="20220918 22:17:50.420"/>
+</kw>
+<doc>Esste teste verifica se será permitido efetuar o login informando um e-mail inválido</doc>
+<tag>email_invalaido</tag>
+<tag>Login</tag>
+<status status="PASS" starttime="20220918 22:17:41.341" endtime="20220918 22:17:50.420"/>
+</test>
+<doc>Essa suite testa o site da Amazon.com.br</doc>
+<status status="PASS" starttime="20220918 22:17:41.018" endtime="20220918 22:17:50.420"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">email_invalaido</stat>
+<stat pass="1" fail="0" skip="0">Login</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Amazon Testes Gherkin">Amazon Testes Gherkin</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
